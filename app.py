@@ -1,4 +1,5 @@
 import streamlit as st
+
 st.title("🐾 Quels types d'animaux préférez-vous ?")
 st.write("Merci de répondre aux questions ci-dessous :")
 # Question 1
