@@ -38,4 +38,7 @@ with st.expander("5. Quels animaux du désert affectionnez-vous le plus ?"):
 if st.button("Envoyer mes réponses"):
     st.subheader("Analyse de vos réponses :")
     grande_liste = choix_domestiques + choix_ferme + choix_savane + choix_foret + choix_desert
-    st.write(grande_liste)
+    if "Chien" in grande_liste:
+        st.write("Je vois que vous aimez bien les chiens. Vous voulez bien promener le mien ?")
+    else:
+        st.write("Ben alors, on aime pas les toutous?!")
