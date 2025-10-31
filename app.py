@@ -26,7 +26,7 @@ with st.expander("3. Quels animaux de la savane vous fascinent le plus ?"):
 with st.expander("4. Quels animaux de la forêt aimez-vous le plus ?"):
     choix_foret = st.multiselect(
         "Choisissez une ou plusieurs options :",
-        ["Loup", "Ours", "Renard", "Ecureuil", "Cerf", "Moufette"],
+        ["Loups", "Ours", "Renard", "Ecureuil", "Cerf", "Moufette"],
         placeholder="Sélectionnez..."
     )
 if st.button("Envoyer mes réponses"):
