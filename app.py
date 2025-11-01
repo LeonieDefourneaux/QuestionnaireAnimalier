@@ -78,6 +78,8 @@ if st.button("Envoyer mes réponses"):
 
     grande_liste = choix_domestiques + choix_ferme + choix_savane + choix_foret + choix_desert
     nombre_animaux = len(grande_liste)
+    for animaux in grande_liste:
+        st.write(correspondances[animaux])
     st.write(nombre_animaux)
     if "Chien" in grande_liste:
         st.write("Je vois que vous aimez bien les chiens. Vous voulez bien promener le mien ?")
