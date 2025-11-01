@@ -6,7 +6,7 @@ st.write("Merci de répondre aux questions ci-dessous :")
 with st.expander("1. Quel type d'animaux domestiques préférez-vous ?"):
     choix_domestiques = st.multiselect(
         "Choisissez une ou plusieurs options :",
-        ["Chien", "Chat", "Cochon d'Inde", "Poisson rouge", "Lapin",""],
+        ["Chien", "Chat", "Cochon d'Inde", "Poisson rouge", "Lapin"],
         placeholder="Sélectionnez..."
     )
     # Question 2
@@ -35,9 +35,50 @@ with st.expander("5. Quels animaux du désert affectionnez-vous le plus ?"):
         ["Mygale", "Fennec", "Serpent", "Chinchilla", "Chameau", "Suricate"],
         placeholder="Sélectionnez..."
     )
+
+
+correspondances ={
+    "Chien":9,
+    "Chat":10,
+    "Cochon d'Inde":10,
+    "Poisson rouge":5,
+    "Lapin":7,
+    "Vache":6,
+    "Cheval":9,
+    "Cochon":3,
+    "Mouton":8,
+    "Poule":7,
+    "Oie":3,
+    "Lion":9,
+    "Léopard":8,
+    "Tigre":8,
+    "Eléphant":8,
+    "Phacochère":5,
+    "Hyène":3,
+    "Loups":9,
+    "Ours":4,
+    "Renard":8,
+    "Ecureuil":8,
+    "Cerf":7,
+    "Moufette":7,
+    "Mygale":0,
+    "Fennec":10,
+    "Serpent":3,
+    "Chinchilla":9,
+    "Chameau":4,
+    "Suricate":9,
+    
+}
+
+
+
+
 if st.button("Envoyer mes réponses"):
     st.subheader("Analyse de vos réponses :")
+
     grande_liste = choix_domestiques + choix_ferme + choix_savane + choix_foret + choix_desert
+    nombre_animaux = len(grande_liste)
+    st.write(nombre_animaux)
     if "Chien" in grande_liste:
         st.write("Je vois que vous aimez bien les chiens. Vous voulez bien promener le mien ?")
     else:
