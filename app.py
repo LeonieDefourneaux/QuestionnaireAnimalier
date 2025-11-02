@@ -78,6 +78,8 @@ if st.button("Envoyer mes réponses"):
 
     grande_liste = choix_domestiques + choix_ferme + choix_savane + choix_foret + choix_desert
     nombre_animaux = len(grande_liste)
+    if nombre_animaux == 0:
+        st.warning("Vous n’avez choisi aucun animal, ça ne peut pas marcher 😅")
     scores_additionnes = 0
     for animaux in grande_liste:
         scores_additionnes += correspondances[animaux]
