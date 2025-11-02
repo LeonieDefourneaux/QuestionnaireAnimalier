@@ -81,11 +81,9 @@ if st.button("Envoyer mes réponses"):
     scores_additionnes = 0
     for animaux in grande_liste:
         scores_additionnes += correspondances[animaux]
-    st.write("Vous avez choisi", nombre_animaux, "animaux.")
-    st.write("La somme des scores de vos animaux s'élève à ",scores_additionnes, ".")
     moyenne = scores_additionnes/nombre_animaux
     moyenne=round(moyenne,1)
-    st.write("Votre moyenne de score est ",moyenne, ".")
+    st.write("La moyenne des ",nombre_animaux," animaux que vous avez choisis est de ",moyenne, "/10.")
     if moyenne >9:
         st.write("Oh! On a tellement les mêmes goûts qu'on dirait que c'est moi qui ai coché les animaux!")
     elif moyenne > 8:
