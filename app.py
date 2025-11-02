@@ -78,9 +78,14 @@ if st.button("Envoyer mes réponses"):
 
     grande_liste = choix_domestiques + choix_ferme + choix_savane + choix_foret + choix_desert
     nombre_animaux = len(grande_liste)
+    scores_additionnes = 0
     for animaux in grande_liste:
         st.write(correspondances[animaux])
-    st.write(nombre_animaux)
+        scores_additionnes += correspondances[animaux]
+    st.write("Vous avez choisi", nombre_animaux, "animaux.")
+    st.write("La somme des scores de vos animaux s'élève à ",scores_additionnes, ".")
+    moyenne = scores_additionnes/nombre_animaux
+    st.write("Votre moyenne de score est ",moyenne, ".")
     if "Chien" in grande_liste:
         st.write("Je vois que vous aimez bien les chiens. Vous voulez bien promener le mien ?")
     else:
